@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/world_clock">
+    <fragment
+        android:id="@+id/world_clock"
+        tools:layout="@layout/fragment_clock"
+        android:name="com.example.alarmapk.ui.clock.ClockFragment"
+        android:label="ClockFragment" />
+    <fragment
+        android:id="@+id/alarm"
+        tools:layout="@layout/fragment_alarm"
+        android:name="com.example.alarmapk.ui.alarm.AlarmFragment"
+        android:label="AlarmFragment" />
+
+
+    <fragment
+        android:id="@+id/timer"
+        tools:layout="@layout/fragment_timer"
+        android:name="com.example.alarmapk.ui.timer.TimerFragment"
+        android:label="TimerFragment" />
+
+    <fragment
+        android:id="@+id/stopwatch"
+        tools:layout="@layout/fragment_stop_watch"
+        android:name="com.example.alarmapk.ui.stopwatch.StopWatchFragment"
+        android:label="StopWatchFragment" />
+    <fragment
+        android:id="@+id/bedtime"
+        tools:layout="@layout/fragment_bedtime"
+        android:name="com.example.alarmapk.ui.bedtime.BedTimeFragment"
+        android:label="BedTimeFragment" />
+</navigation>

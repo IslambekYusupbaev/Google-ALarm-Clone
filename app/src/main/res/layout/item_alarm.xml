@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/shape_screen"
+    android:clickable="true"
+    android:foreground="@drawable/ripple_anim">
+
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:el_expanded="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_on"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_margin="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:elevation="1dp"
+                android:padding="8dp"
+                android:rotation="-90"
+                android:src="@drawable/ic_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="08:30"
+                android:textSize="48sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_every_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:text="Every day"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@id/tv_clock"
+                app:layout_constraintTop_toBottomOf="@id/tv_clock" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_on" />
+
+
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expanded_layou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                app:el_duration="400"
+                app:el_expanded="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_every_day">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_week_days"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_monday"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/shape_day"
+                                android:gravity="center"
+                                android:text="M"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_tuesday"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/shape_day"
+                                android:gravity="center"
+                                android:text="M"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_wednesday"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/shape_day"
+                                android:gravity="center"
+                                android:text="M"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_thursday"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/shape_day"
+                                android:gravity="center"
+                                android:text="M"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_friday"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/shape_day"
+                                android:gravity="center"
+                                android:text="M"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_saturday"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/shape_day"
+                                android:gravity="center"
+                                android:text="M"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_sunday"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/shape_day"
+                                android:gravity="center"
+                                android:text="M"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/suspend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/ic_alarm_on"
+                        android:drawableEnd="@drawable/ic_add_circle"
+                        android:drawablePadding="8dp"
+                        android:text="Suspend alarm"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:layout_constraintTop_toBottomOf="@id/ll_week_days" />
+
+                    <TextView
+                        android:id="@+id/day_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="28dp"
+                        android:text="sadasdasdasd"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@id/suspend"
+                        app:layout_constraintEnd_toEndOf="@id/suspend"
+                        app:layout_constraintTop_toTopOf="@id/suspend"/>
+
+
+                    <TextView
+                        android:id="@+id/morning_glory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/ic_notification"
+                        android:drawablePadding="8dp"
+                        android:text="Morning Glory"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="@id/suspend"
+                        app:layout_constraintStart_toStartOf="@id/suspend"
+                        app:layout_constraintTop_toBottomOf="@id/suspend" />
+
+                    <TextView
+                        android:id="@+id/vibration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/ic_vibration"
+                        android:drawableEnd="@drawable/ic_check"
+                        android:drawablePadding="8dp"
+                        android:text="Vibration"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="@id/morning_glory"
+                        app:layout_constraintStart_toStartOf="@id/morning_glory"
+                        app:layout_constraintTop_toBottomOf="@id/morning_glory" />
+
+                    <TextView
+                        android:id="@+id/delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableStart="@drawable/ic_delete"
+                        android:drawablePadding="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="Delete"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="@id/vibration"
+                        app:layout_constraintStart_toStartOf="@id/vibration"
+                        app:layout_constraintTop_toBottomOf="@id/vibration" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
